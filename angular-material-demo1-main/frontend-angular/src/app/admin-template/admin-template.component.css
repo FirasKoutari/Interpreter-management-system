@@ -1,0 +1,10 @@
+.spacer {
+  flex: auto;
+}
+mat-expansion-panel {
+  width: 100%;
+}
+
+.section-panel {
+  margin-bottom: 1.5px; /* Adjust the value as needed */
+}

@@ -1,0 +1,31 @@
+<form [formGroup]="myform" (ngSubmit)="saveClient()">
+  <h1 mat-dialog-title>{{inputdata.title}}</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Client Name</mat-label>
+      <input formControlName="name" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Langue</mat-label>
+      <input formControlName="langue" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input formControlName="date" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Heure</mat-label>
+      <input formControlName="heure" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <input formControlName="status" matInput>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    
+    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button (click)="closepopup()" mat-raised-button color="accent">Close</button>
+    <!--<button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button>-->
+  </div>
+</form>

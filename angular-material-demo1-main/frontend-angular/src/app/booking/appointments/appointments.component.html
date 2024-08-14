@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Schedule an Appointment</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>interpreter Name</mat-label>
+          <input matInput formControlName="interpreterName" required>
+          <mat-error *ngIf="appointmentForm.get('interpreterName')?.hasError('required')">
+            interpreter name is required.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Appointment Date</mat-label>
+          <input matInput type="date" formControlName="appointmentDate" required>
+          <mat-error *ngIf="appointmentForm.get('appointmentDate')?.hasError('required')">
+            Appointment date is required.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Time</mat-label>
+          <input matInput type="time" formControlName="time" required>
+          <mat-error *ngIf="appointmentForm.get('time')?.hasError('required')">
+            Time is required.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Notes</mat-label>
+          <textarea matInput formControlName="notes"></textarea>
+        </mat-form-field>
+  
+        <div>
+          <button mat-raised-button color="primary" type="submit">Schedule Appointment</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,26 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.stats-cards {
+  display: flex;
+  gap: 16px;
+}
+
+.stat-card {
+  flex: 1;
+  text-align: center;
+}
+
+.charts {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  flex: 1;
+}

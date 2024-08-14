@@ -1,0 +1,36 @@
+<div class="interpreter-detail-container">
+    <mat-card class="interpreter-card">
+      <mat-card-header>
+        <mat-card-title>Interpreter Details</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="interpreter-info">
+          <mat-list>
+            <mat-list-item>
+              <span mat-line><strong>ID:</strong> {{ interpreter.id }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Name:</strong> {{ interpreter.name }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Langue:</strong> {{ interpreter.langue }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Date:</strong> {{ interpreter.date }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Heure:</strong> {{ interpreter.heure }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Status:</strong> {{ interpreter.status }}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/admin/interpreters">Back to Interpreters</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

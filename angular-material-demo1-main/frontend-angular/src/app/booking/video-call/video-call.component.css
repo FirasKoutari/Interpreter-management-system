@@ -1,0 +1,9 @@
+:host {
+    display: block;
+  }
+  
+  #myRoot {
+    width: 80vw;
+    height: 90vh;
+  }
+  

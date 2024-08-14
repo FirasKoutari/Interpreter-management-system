@@ -1,0 +1,76 @@
+<div class="dashboard-container">
+  <!-- Statistiques clés -->
+  <div class="stats-cards">
+    <mat-card class="stat-card">
+      <mat-card-title>Réservations</mat-card-title>
+      <mat-card-content>
+        <h2>{{ reservationsCount }}</h2>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="stat-card">
+      <mat-card-title>Interprètes Disponibles</mat-card-title>
+      <mat-card-content>
+        <h2>{{ interpretersAvailable }}</h2>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Graphiques -->
+  <div class="charts">
+    <mat-card>
+      <mat-card-title>Réservations par Mois</mat-card-title>
+      <mat-card-content>
+        <!--<canvas baseChart
+                [datasets]="reservationData"
+                [labels]="reservationLabels"
+                [options]="chartOptions"
+                [legend]="true"
+                [chartType]="'line'">
+        </canvas>-->
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Disponibilité des Interprètes</mat-card-title>
+      <mat-card-content>
+        <!--<canvas baseChart
+                [datasets]="interpreterData"
+                [labels]="interpreterLabels"
+                [options]="chartOptions"
+                [legend]="true"
+                [chartType]="'bar'">
+        </canvas> -->
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Activités récentes -->
+  <mat-card>
+    <mat-card-title>Activités Récentes</mat-card-title>
+    <mat-card-content>
+      <table mat-table [dataSource]="recentActivities" class="mat-elevation-z8">
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef>Date</th>
+          <td mat-cell *matCellDef="let activity">{{ activity.date | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let activity">{{ activity.description }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Liens rapides -->
+  <mat-card>
+    <mat-card-title>Liens Rapides</mat-card-title>
+    <mat-card-content>
+      <button mat-button routerLink="/reservations">Gérer les Réservations</button>
+      <button mat-button routerLink="/interpreters">Voir les Interprètes</button>
+      <button mat-button routerLink="/billing">Facturation</button>
+    </mat-card-content>
+  </mat-card>
+</div>

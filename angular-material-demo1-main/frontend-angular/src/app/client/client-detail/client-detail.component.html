@@ -1,0 +1,36 @@
+<div class="client-detail-container">
+    <mat-card class="client-card">
+      <mat-card-header>
+        <mat-card-title>Client Details</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="client-info">
+          <mat-list>
+            <mat-list-item>
+              <span mat-line><strong>ID:</strong> {{ client.id }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Name:</strong> {{ client.name }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Langue:</strong> {{ client.langue }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Date:</strong> {{ client.date }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Heure:</strong> {{ client.heure }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Status:</strong> {{ client.status }}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/admin/clients">Back to Clients</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,12 @@
+.invoice-list {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th.mat-header-cell {
+    text-transform: uppercase;
+  }
+  
