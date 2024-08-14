@@ -16,6 +16,7 @@ import { ClientDetailComponent } from './client/client-detail/client-detail.comp
 import { InterpreterDetailComponent } from './interpreter/interpreter-detail/interpreter-detail.component';
 import { InvoiceListComponent } from './billing/invoice-list/invoice-list.component';
 import { VideoCallComponent } from './booking/video-call/video-call.component';
+import { InvoiceDetailComponent } from './billing/invoice-detail/invoice-detail.component';
 
 const routes: Routes = [
   {path : "", component : VideoCallComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
       {path : "appointments", component : AppointmentsComponent},
       {path : "calendar", component : CalendarComponent},
       {path : "invoice", component : InvoiceListComponent},
+      {path : "invoice/:id", component : InvoiceDetailComponent},
       {path : "videocall", component : VideoCallComponent},
     ]},
 ];

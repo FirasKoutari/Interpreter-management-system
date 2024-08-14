@@ -1,1 +1,33 @@
-<p>invoice-detail works!</p>
+<div class="invoice-detail-container">
+    <mat-card class="invoice-card">
+      <mat-card-header>
+        <mat-card-title>Invoice Details</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="invoice-info">
+          <mat-list>
+            <mat-list-item>
+              <span mat-line><strong>ID:</strong> {{ invoice.id }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Client:</strong> {{ invoice.client }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Amount:</strong> {{ invoice.amount | currency }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Date:</strong> {{ invoice.date | date }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span mat-line><strong>Status:</strong> {{ invoice.status }}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/admin/invoices">Back to Invoices</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

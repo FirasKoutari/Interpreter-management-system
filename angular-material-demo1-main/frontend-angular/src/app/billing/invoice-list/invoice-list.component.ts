@@ -72,7 +72,7 @@ export class InvoiceListComponent implements OnInit, AfterViewInit {
   }
 
   viewDetails(invoice: Invoice) {
-    this.router.navigate(['/admin/invoices', invoice.id]);
+    this.router.navigate(['/admin/invoice', invoice.id]);
   }
 
   openPopup(id: number, title: string) {
