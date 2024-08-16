@@ -19,7 +19,7 @@ import { VideoCallComponent } from './booking/video-call/video-call.component';
 import { InvoiceDetailComponent } from './billing/invoice-detail/invoice-detail.component';
 
 const routes: Routes = [
-  {path : "", component : VideoCallComponent},
+  {path : "", component : HomeComponent},
   {path : "login", component : LoginComponent},
   {path: 'register', component: RegisterComponent },
 

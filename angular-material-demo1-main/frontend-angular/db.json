@@ -136,7 +136,8 @@
       "date": "2024-08-10",
       "heure": "11:00:00",
       "status": "pending",
-      "id": 1
+      "id": 1,
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 2,
@@ -144,7 +145,8 @@
       "langue": "Italien",
       "date": "2024-08-11",
       "heure": "12:30:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 3,
@@ -152,7 +154,8 @@
       "langue": "Portugais",
       "date": "2024-08-12",
       "heure": "13:00:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 4,
@@ -160,7 +163,8 @@
       "langue": "Néerlandais",
       "date": "2024-08-13",
       "heure": "14:00:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 5,
@@ -168,7 +172,8 @@
       "langue": "Chinois",
       "date": "2024-08-14",
       "heure": "15:15:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 6,
@@ -176,7 +181,8 @@
       "langue": "Japonais",
       "date": "2024-08-15",
       "heure": "16:00:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 7,
@@ -184,7 +190,8 @@
       "langue": "Coréen",
       "date": "2024-08-16",
       "heure": "17:30:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     },
     {
       "id": 8,
@@ -192,7 +199,8 @@
       "langue": "Arabe",
       "date": "2024-08-17",
       "heure": "18:00:00",
-      "status": "pending"
+      "status": "pending",
+      "imageUrl": "assets/jane-smith.jpg"
     }
   ],
   "invoices": [

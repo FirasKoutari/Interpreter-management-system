@@ -14,6 +14,8 @@ export class InterpreterService {
 
 
 //Interpreters
+
+
   GetInterpreter():Observable<Interpreter[]> {
     return this.http.get<Interpreter[]>(this.apiUrl);
   }

@@ -1,11 +1,41 @@
-<div class="container">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Home title</mat-card-title>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      Home Content
-    </mat-card-content>
-  </mat-card>
-</div>
+<header class="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo">
+  </div>
+  <nav class="navigation">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">Contact</a>
+    <a href="#" class="nav-item">Appointment</a>
+    <a href="#" class="nav-item">Login/Register</a>
+  </nav>
+  <div class="notification">
+    <i class="fa fa-bell"></i>
+  </div>
+</header>
+
+  <div class="banner">
+    <div class="banner-item">
+      <img class="d-block w-110 " src="assets/banner.jpg" alt="First slide">
+    </div>
+  </div>
+
+
+<section class="search-bar">
+  <form>
+    <input type="text" placeholder="Filter by interpreter name" #filter>
+    <button type="button" (click)="filterResults(filter.value)">Search</button>
+  </form>
+</section>
+
+<section class="results">
+  <div *ngFor="let interpreter of filteredInterpreterList" class="interpreter-card">
+    <img [src]="interpreter.imageUrl" alt="{{ interpreter.name }}" class="interpreter-image">
+    <div class="interpreter-details">
+      <h3>{{ interpreter.name }}</h3>
+      <p><i class="fa fa-language"></i> Language: {{ interpreter.langue }}</p>
+      <p><i class="fa fa-calendar"></i> Date: {{ interpreter.date }}</p>
+      <p><i class="fa fa-clock"></i> Time: {{ interpreter.heure }}</p>
+      <button (click)="makeAppointment(interpreter)">Make Appointment</button>
+    </div>
+  </div>
+</section>
