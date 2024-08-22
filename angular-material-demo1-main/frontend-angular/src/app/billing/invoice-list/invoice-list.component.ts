@@ -5,7 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ConfirmDialogComponent } from '../../Dialog/confirm-dialog/confirm-dialog.component';
-import { PopupComponent } from '../../Dialog/popup/popup.component';
+import { PopupInvoiceComponent } from '../../Dialog/popup-invoice/popup-invoice.component';
 import { Invoice } from '../../Model/Invoice';
 import { InvoiceService } from '../../services/invoice.service';
 
@@ -76,7 +76,7 @@ export class InvoiceListComponent implements OnInit, AfterViewInit {
   }
 
   openPopup(id: number, title: string) {
-    const popup = this.dialog.open(PopupComponent, {
+    const popup = this.dialog.open(PopupInvoiceComponent, {
       width: '60%',
       enterAnimationDuration: '100ms',
       exitAnimationDuration: '100ms',

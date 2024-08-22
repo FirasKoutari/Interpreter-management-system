@@ -55,6 +55,7 @@ import { PopupComponent } from './Dialog/popup/popup.component'
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.component';
 import { PopupInterpreterComponent } from './Dialog/popup-interpreter/popup-interpreter.component';
+import { PopupInvoiceComponent } from './Dialog/popup-invoice/popup-invoice.component';
 
 
 
@@ -92,7 +93,8 @@ import { PopupInterpreterComponent } from './Dialog/popup-interpreter/popup-inte
     TenantDetailComponent,
     PopupComponent,
     ConfirmDialogComponent,
-    PopupInterpreterComponent
+    PopupInterpreterComponent,
+    PopupInvoiceComponent
 
   ],
   imports: [
