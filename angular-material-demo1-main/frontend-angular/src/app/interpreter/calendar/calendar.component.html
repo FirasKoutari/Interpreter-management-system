@@ -8,7 +8,40 @@
       dragOverClass="drag-over"
     >
       <div class="card-body">
-        <p *ngIf="externalEvents.length === 0"><em>No events added</em></p>
+        <div class="mt-3">
+          <input
+            type="text"
+            [(ngModel)]="newEventTitle"
+            placeholder="Enter event name"
+            class="form-control mb-2"
+          />
+          <input
+            type="text"
+            [(ngModel)]="selectedInterpreter"
+            placeholder="Type interpreter name"
+            (input)="filterInterpreters()"
+            class="form-control mb-2"
+          />
+          <ul class="list-group mb-2" *ngIf="filteredInterpreters.length > 0">
+            <li
+              *ngFor="let interpreter of filteredInterpreters"
+              class="list-group-item list-group-item-action"
+              (click)="selectedInterpreter = interpreter.name"
+            >
+              {{ interpreter.name }}
+            </li>
+          </ul>
+          <button
+            class="btn btn-primary btn-block"
+            (click)="addCustomEvent()"
+          >
+            Add Event for Interpreter
+          </button>
+        </div>
+        <br />
+        <p *ngIf="externalEvents.length === 0">
+          <em>No events added</em>
+        </p>
         <ul>
           <li
             *ngFor="let event of externalEvents"
@@ -25,6 +58,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="col-md-9">
     <mwl-demo-utils-calendar-header [(view)]="view" [(viewDate)]="viewDate"></mwl-demo-utils-calendar-header>

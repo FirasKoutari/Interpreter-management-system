@@ -1,13 +1,15 @@
-import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { CalendarEvent, CalendarEventTimesChangedEvent, CalendarView } from 'angular-calendar';
-import { addDays, addHours, isSameDay, setDay, startOfDay, subDays, subSeconds } from 'date-fns';
 import { colors } from '../../demo-utils/colors';
+import { Interpreter } from '../../Model/Interpreter'; 
+import { InterpreterService } from '../../services/interpreter.service';
 
 @Component({
   selector: 'app-calendar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './calendar.component.html',
+  encapsulation: ViewEncapsulation.None,
   styles: [
     `
       .drag-active {
@@ -17,38 +19,58 @@ import { colors } from '../../demo-utils/colors';
       }
       .drag-over {
         background-color: #eee;
-        
       }
     `,
   ],
 })
-export class CalendarComponent {
+export class CalendarComponent implements OnInit {
   CalendarView = CalendarView;
-
   view = CalendarView.Month;
-
   viewDate = new Date();
-
-  externalEvents: CalendarEvent[] = [
-    {
-      title: 'Event 1',
-      color: colors.yellow,
-      start: new Date(),
-      draggable: true,
-    },
-    {
-      title: 'Event 2',
-      color: colors.blue,
-      start: new Date(),
-      draggable: true,
-    },
-  ];
-
+  externalEvents: CalendarEvent[] = [];
   events: CalendarEvent[] = [];
-
   activeDayIsOpen = false;
-
   refresh = new Subject<void>();
+  newEventTitle: string = '';
+  selectedInterpreter: string = '';
+  filteredInterpreters: Interpreter[] = [];
+  interpreters: Interpreter[] = [];
+
+  constructor(private interpreterService: InterpreterService) {}
+
+  ngOnInit() {
+    this.interpreterService.GetInterpreter().subscribe((data) => {
+      this.interpreters = data;
+    });
+  }
+
+  filterInterpreters() {
+    if (this.selectedInterpreter.trim()) {
+      this.filteredInterpreters = this.interpreters.filter((interpreter) =>
+        interpreter.name.toLowerCase().includes(this.selectedInterpreter.toLowerCase())
+      );
+    } else {
+      this.filteredInterpreters = [];
+    }
+  }
+
+  addCustomEvent() {
+    const selectedInterpreterObject = this.interpreters.find(
+      (interpreter) => interpreter.name === this.selectedInterpreter
+    );
+
+    if (this.newEventTitle.trim() && selectedInterpreterObject) {
+      this.externalEvents.push({
+        title: `${this.newEventTitle} (For ${this.selectedInterpreter})`,
+        start: new Date(),
+        color: colors.red, // Default color for new events
+        draggable: true,
+      });
+      this.newEventTitle = '';
+      this.selectedInterpreter = '';
+      this.filteredInterpreters = [];
+    }
+  }
 
   eventDropped({
     event,

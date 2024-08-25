@@ -253,5 +253,71 @@
       "status": "dsf",
       "id": 6
     }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Consultation with John Doe",
+      "start": "2024-08-25T10:00:00",
+      "end": "2024-08-25T11:00:00",
+      "color": {
+        "primary": "#ad2121",
+        "secondary": "#FAE3E3"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "allDay": false,
+      "interpreterId": 1
+    },
+    {
+      "id": 2,
+      "title": "Meeting with Jane Smith",
+      "start": "2024-08-26T14:00:00",
+      "end": "2024-08-26T15:00:00",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "allDay": false,
+      "interpreterId": 2
+    },
+    {
+      "id": 3,
+      "title": "Workshop with John Doe",
+      "start": "2024-08-27T09:00:00",
+      "end": "2024-08-27T12:00:00",
+      "color": {
+        "primary": "#ff9800",
+        "secondary": "#FFE0B2"
+      },
+      "draggable": false,
+      "allDay": false,
+      "interpreterId": 1
+    },
+    {
+      "id": 4,
+      "title": "Training with Jane Smith",
+      "start": "2024-08-28T13:00:00",
+      "end": "2024-08-28T14:00:00",
+      "color": {
+        "primary": "#4caf50",
+        "secondary": "#C8E6C9"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": false,
+        "afterEnd": true
+      },
+      "allDay": false,
+      "interpreterId": 2
+    }
   ]
 }
