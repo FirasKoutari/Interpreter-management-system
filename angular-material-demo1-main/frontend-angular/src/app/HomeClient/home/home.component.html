@@ -29,13 +29,18 @@
 
 <section class="results">
   <div *ngFor="let interpreter of filteredInterpreterList" class="interpreter-card">
-    <img [src]="interpreter.imageUrl" alt="{{ interpreter.name }}" class="interpreter-image">
-    <div class="interpreter-details">
-      <h3>{{ interpreter.name }}</h3>
-      <p><i class="fa fa-language"></i> Language: {{ interpreter.langue }}</p>
-      <p><i class="fa fa-calendar"></i> Date: {{ interpreter.date }}</p>
-      <p><i class="fa fa-clock"></i> Time: {{ interpreter.heure }}</p>
-      <button (click)="makeAppointment(interpreter)">Make Appointment</button>
+    <div *ngIf="interpreter.status === 'pending'">
+      <img [src]="interpreter.imageUrl" alt="{{ interpreter.name }}" class="interpreter-image">
+      <div class="interpreter-details">
+        <h3>{{ interpreter.name }}</h3>
+        <p><i class="fa fa-language"></i> Language: {{ interpreter.langue }}</p>
+        <p><i class="fa fa-calendar"></i> Type de Service: {{ interpreter.type }}</p>
+        <p><i class="fa fa-clock"></i> Ville: {{ interpreter.ville }}</p>
+        <button [routerLink]="['/appointment', interpreter.id]">
+          Make Appointment
+        </button>
+      </div>
     </div>
   </div>
 </section>
+

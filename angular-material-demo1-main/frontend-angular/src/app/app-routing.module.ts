@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
+import {HomeComponent} from "./HomeClient/home/home.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {DashboardComponent} from "./admin/dashboard/dashboard.component";
 import {AdminTemplateComponent} from "./admin-template/admin-template.component";
@@ -17,9 +17,13 @@ import { InterpreterDetailComponent } from './interpreter/interpreter-detail/int
 import { InvoiceListComponent } from './billing/invoice-list/invoice-list.component';
 import { VideoCallComponent } from './booking/video-call/video-call.component';
 import { InvoiceDetailComponent } from './billing/invoice-detail/invoice-detail.component';
+import { AppointmentComponent } from './HomeClient/appointment/appointment.component';
+import { BookingRequestComponent } from './booking/booking-request/booking-request.component';
 
 const routes: Routes = [
   {path : "", component : HomeComponent},
+  {path: 'appointment/:id', component: AppointmentComponent },
+  {path: 'booking-request', component: BookingRequestComponent },
   {path : "login", component : LoginComponent},
   {path: 'register', component: RegisterComponent },
 
@@ -27,6 +31,7 @@ const routes: Routes = [
 
     children : [
       {path : "home", component : HomeComponent},
+      
       {path : 'profile', component: UserProfileComponent},
       {path : "dashboard", component : DashboardComponent},
       {path : "interpreters", component : InterpretersComponent},

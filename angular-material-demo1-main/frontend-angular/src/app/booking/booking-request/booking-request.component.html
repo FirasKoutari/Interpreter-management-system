@@ -1,1 +1,16 @@
-<p>booking-request works!</p>
+<section class="booking-requests">
+    <h2>Appointment Requests </h2>
+    <div *ngFor="let request of bookingRequests" class="request-card">
+      <h3>{{ request.name }}</h3>
+      <p><strong>Language:</strong> {{ request.langue }}</p>
+      <p><strong>Date:</strong> {{ request.date }}</p>
+      <p><strong>Time:</strong> {{ request.heure }}</p>
+      <p><strong>Status:</strong> {{ request.status }}</p>
+  
+      <div class="actions" *ngIf="request.status === 'pending'">
+        <button (click)="acceptRequest(request)">Accept</button>
+        <button (click)="rejectRequest(request)">Reject</button>
+      </div>
+    </div>
+  </section>
+  

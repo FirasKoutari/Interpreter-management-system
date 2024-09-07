@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo">
+  </div>
+  <nav class="navigation">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">Contact</a>
+    <a href="#" class="nav-item">Appointment</a>
+    <a href="#" class="nav-item">Login/Register</a>
+  </nav>
+  <div class="notification">
+    <i class="fa fa-bell"></i>
+  </div>
+</header>
+
+<section class="appointment-section" *ngIf="interpreter">
+    <h1>Appointment with {{ interpreter.name }}</h1>
+    <img [src]="interpreter.imageUrl" alt="{{ interpreter.name }}" class="interpreter-image">
+    <p><strong>Language:</strong> {{ interpreter.langue }}</p>
+    <p><strong>City:</strong> {{ interpreter.ville }}</p>
+    <p><strong>Service Type:</strong> {{ interpreter.type }}</p>
+  
+    <form class="appointment-form" (ngSubmit)="submitAppointment()">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" [(ngModel)]="appointmentDate" name="appointmentDate" required>
+  
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" [(ngModel)]="appointmentTime" name="appointmentTime" required>
+  
+      <label for="serviceType">Service Type:</label>
+      <select id="serviceType" [(ngModel)]="serviceType" name="serviceType" required>
+        <option value="Translation">En ligne</option>
+        <option value="Interpretation">Sur place</option>
+      </select>
+  
+      <button type="submit" [routerLink]="['/booking-request']">Submit Appointment</button>
+
+    </form>
+  </section>
+  

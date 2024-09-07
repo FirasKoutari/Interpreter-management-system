@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InterpreterService } from '../services/interpreter.service';
-import { Interpreter } from '../Model/Interpreter';
+import { InterpreterService } from '../../services/interpreter.service';
+import { Interpreter } from '../../Model/Interpreter';
 
 @Component({
   selector: 'app-home',

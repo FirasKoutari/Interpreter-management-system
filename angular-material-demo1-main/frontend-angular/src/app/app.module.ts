@@ -9,7 +9,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListItem, MatListModule, MatNavList} from "@angular/material/list";
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './HomeClient/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { MatCardModule} from "@angular/material/card";
@@ -56,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.component';
 import { PopupInterpreterComponent } from './Dialog/popup-interpreter/popup-interpreter.component';
 import { PopupInvoiceComponent } from './Dialog/popup-invoice/popup-invoice.component';
+import { AppointmentComponent } from './HomeClient/appointment/appointment.component';
 
 
 
@@ -94,7 +95,8 @@ import { PopupInvoiceComponent } from './Dialog/popup-invoice/popup-invoice.comp
     PopupComponent,
     ConfirmDialogComponent,
     PopupInterpreterComponent,
-    PopupInvoiceComponent
+    PopupInvoiceComponent,
+    AppointmentComponent
 
   ],
   imports: [

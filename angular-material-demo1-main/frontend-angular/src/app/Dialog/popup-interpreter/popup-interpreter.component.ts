@@ -17,7 +17,9 @@ export class PopupInterpreterComponent {
     langue: this.buildr.control(''),
     date: this.buildr.control(''),
     heure: this.buildr.control(''),
-    status: this.buildr.control('')
+    status: this.buildr.control(''),
+    type: this.buildr.control(''),
+    ville: this.buildr.control('')
   });
   editdata: any;
   closemessage = 'closed using directive'
@@ -37,7 +39,10 @@ export class PopupInterpreterComponent {
         langue: this.editdata.langue,
         date: this.editdata.date,
         heure: this.editdata.heure,
-        status: this.editdata.status
+        status: this.editdata.status,
+        type: this.editdata.type,
+        ville: this.editdata.ville
+
       });
     });
   }
