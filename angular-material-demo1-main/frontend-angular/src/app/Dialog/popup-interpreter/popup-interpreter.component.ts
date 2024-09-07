@@ -15,8 +15,6 @@ export class PopupInterpreterComponent {
   myform = this.buildr.group({
     name: this.buildr.control(''),
     langue: this.buildr.control(''),
-    date: this.buildr.control(''),
-    heure: this.buildr.control(''),
     status: this.buildr.control(''),
     type: this.buildr.control(''),
     ville: this.buildr.control('')
@@ -37,8 +35,6 @@ export class PopupInterpreterComponent {
       this.myform.setValue({
         name: this.editdata.name,
         langue: this.editdata.langue,
-        date: this.editdata.date,
-        heure: this.editdata.heure,
         status: this.editdata.status,
         type: this.editdata.type,
         ville: this.editdata.ville

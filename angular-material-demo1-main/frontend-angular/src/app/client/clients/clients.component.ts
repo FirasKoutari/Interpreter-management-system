@@ -17,7 +17,7 @@ import { ConfirmDialogComponent } from '../../Dialog/confirm-dialog/confirm-dial
 export class ClientsComponent implements OnInit,AfterViewInit {
   public clientList !:Client[];
   public dataSource : any;
-  public displayedColumns: string[] = ["id", "name", "langue", "date", "heure", "status", "actions"];
+  public displayedColumns: string[] = ["id", "name", "langue", "status", "actions"];
 
   @ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;

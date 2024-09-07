@@ -3,32 +3,24 @@
     {
       "name": "Interpreter E",
       "langue": "Portugais",
-      "date": "2024-08-12",
-      "heure": "13:00:00",
       "status": "pending",
       "id": 3
     },
     {
       "name": "Interpreter G",
       "langue": "Chinois",
-      "date": "2024-08-14",
-      "heure": "15:15:00",
       "status": "pending",
       "id": 5
     },
     {
       "name": "Interpreter H",
       "langue": "Japonais",
-      "date": "2024-08-15",
-      "heure": "16:00:00",
       "status": "pending",
       "id": 6
     },
     {
       "name": "Client Fs",
       "langue": "Néerlandais",
-      "date": "2024-08-13",
-      "heure": "14:00:00",
       "status": "pending",
       "id": 7
     },
@@ -36,95 +28,72 @@
       "id": 8,
       "name": "Client G",
       "langue": "Chinois",
-      "date": "2024-08-14",
-      "heure": "15:15:00",
       "status": "pending"
     },
     {
       "id": 9,
       "name": "Client H",
       "langue": "Japonais",
-      "date": "2024-08-15",
-      "heure": "16:00:00",
       "status": "pending"
     },
     {
       "id": 10,
       "name": "Client I",
       "langue": "Coréen",
-      "date": "2024-08-16",
-      "heure": "17:30:00",
       "status": "pending"
     },
     {
       "id": 11,
       "name": "Client J",
       "langue": "Arabe",
-      "date": "2024-08-17",
-      "heure": "18:00:00",
       "status": "pending"
     },
     {
       "name": "khalil",
       "langue": "francais",
-      "date": "dsdqfsdqfdsq",
-      "heure": "ffdsqf",
       "status": "qfsdsqdf",
       "id": 15
     },
     {
       "name": "Test Clients",
       "langue": "Francais",
-      "date": "2024-08-07",
-      "heure": "14:30:00",
       "status": "pending",
       "id": 17
     },
     {
       "name": "Test Client",
       "langue": "Francais",
-      "date": "2024-08-07",
-      "heure": "14:30:00",
       "status": "pending",
       "id": 18
     },
     {
       "name": "Yassir",
       "langue": "Anglais",
-      "date": "2024-08-09\t",
-      "heure": "10:15:23",
       "status": "in process",
       "id": 19
     },
     {
       "name": "gf",
       "langue": "fgds",
-      "date": "sfdg",
-      "heure": "dsfg",
       "status": "sdgf",
       "id": 20
     },
     {
-      "name": "",
-      "langue": "",
-      "date": "",
-      "heure": "",
-      "status": "",
+      "name": "arara",
+      "langue": "rarar",
+      "status": "raraa",
       "id": 21
     },
     {
       "name": "",
       "langue": "",
-      "date": "",
-      "heure": "",
+
       "status": "",
       "id": 22
     },
     {
       "name": "",
       "langue": "",
-      "date": "",
-      "heure": "",
       "status": "",
       "id": 23
     },
@@ -141,8 +110,6 @@
     {
       "name": "Interpreter Cd",
       "langue": "Allemand",
-      "date": "2024-08-10",
-      "heure": "11:00:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -152,8 +119,6 @@
       "id": 2,
       "name": "Interpreter D",
       "langue": "Italien",
-      "date": "2024-08-11",
-      "heure": "12:30:00",
       "status": "pending",
       "type": "enligne",
       "ville": "Casablanca",
@@ -163,8 +128,6 @@
       "id": 3,
       "name": "Interpreter E",
       "langue": "Portugais",
-      "date": "2024-08-12",
-      "heure": "13:00:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -173,8 +136,6 @@
     {
       "name": "Interpreter F",
       "langue": "Néerlandais",
-      "date": "2024-08-13",
-      "heure": "14:00:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -183,8 +144,6 @@
     {
       "name": "Interpreter G",
       "langue": "Chinois",
-      "date": "2024-08-14",
-      "heure": "14:00:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -194,8 +153,6 @@
       "id": 6,
       "name": "Interpreter H",
       "langue": "Japonais",
-      "date": "2024-08-15",
-      "heure": "16:00:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -205,8 +162,6 @@
       "id": 7,
       "name": "Interpreter I",
       "langue": "Coréen",
-      "date": "2024-08-16",
-      "heure": "17:30:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -216,8 +171,6 @@
       "id": 8,
       "name": "Interpreter J",
       "langue": "Arabe",
-      "date": "2024-08-17",
-      "heure": "18:00:00",
       "status": "pending",
       "type": "sur place",
       "ville": "Casablanca",
@@ -226,8 +179,6 @@
     {
       "name": "firas",
       "langue": "francais",
-      "date": "2024-09-14",
-      "heure": "15:15:15",
       "status": "disponible",
       "type": "surplace",
       "ville": "settat",

@@ -16,7 +16,7 @@ import { InterpreterService } from '../../services/interpreter.service';
 export class InterpretersComponent implements OnInit,AfterViewInit{
   public interpreterList !:Interpreter[];
   public dataSource : any;
-  public displayedColumns: string[] = ["id", "name", "langue", "date", "heure", "status", "actions"];
+  public displayedColumns: string[] = ["id", "name", "langue", "status", "type", "ville", "actions"];
 
   @ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;

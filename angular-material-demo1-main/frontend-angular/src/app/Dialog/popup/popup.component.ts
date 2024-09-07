@@ -14,8 +14,6 @@ export class PopupComponent implements OnInit {
   myform = this.buildr.group({
     name: this.buildr.control(''),
     langue: this.buildr.control(''),
-    date: this.buildr.control(''),
-    heure: this.buildr.control(''),
     status: this.buildr.control('')
   });
   editdata: any;
@@ -34,8 +32,6 @@ export class PopupComponent implements OnInit {
       this.myform.setValue({
         name: this.editdata.name,
         langue: this.editdata.langue,
-        date: this.editdata.date,
-        heure: this.editdata.heure,
         status: this.editdata.status
       });
     });
