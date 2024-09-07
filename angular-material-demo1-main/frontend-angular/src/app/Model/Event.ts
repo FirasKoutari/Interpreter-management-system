@@ -1,3 +1,5 @@
+import { Interpreter } from "./Interpreter";
+
 export interface Event {
     id: number;
     title: string;
@@ -13,6 +15,6 @@ export interface Event {
       afterEnd: boolean;
     };
     allDay?: boolean;
-    interpreterId: number; // Foreign key to relate with an Interpreter
+    interpreterId: Interpreter; // Foreign key to relate with an Interpreter
   }
   
