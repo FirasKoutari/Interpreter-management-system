@@ -1,34 +1,63 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {MatTableDataSource} from "@angular/material/table";
+import {MatPaginator} from "@angular/material/paginator";
+import {MatSort} from "@angular/material/sort";
+import {Router} from "@angular/router";
+import { MatDialog } from '@angular/material/dialog';
+
+import { Appointment } from '../../Model/Appointment';
 import { BookingRequestService } from '../../services/booking-request.service';
-import { Client } from '../../Model/Client';
 
 @Component({
   selector: 'app-booking-request',
   templateUrl: './booking-request.component.html',
-  styleUrls: ['./booking-request.component.css']
+  styleUrl: './booking-request.component.css'
 })
-export class BookingRequestComponent implements OnInit {
-  bookingRequests: Client[] = [];
+export class BookingRequestComponent implements OnInit, AfterViewInit {
+  public bookingList!: Appointment[];
+  public dataSource: any;
+  public displayedColumns: string[] = ["clientName", "interpreterName", "date", "time", "serviceType", "actions"];
 
-  constructor(private bookingRequestService: BookingRequestService) {}
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
-  ngOnInit(): void {
-    this.bookingRequestService.getBookingRequests().subscribe(requests => {
-      this.bookingRequests = requests;
+  constructor(private service: BookingRequestService, private dialog: MatDialog, private router: Router) {
+    this.loadBookingRequests();
+  }
+
+  loadBookingRequests() {
+    this.service.GetBookingRequests().subscribe(res => {
+      this.bookingList = res;
+      this.dataSource = new MatTableDataSource<Appointment>(this.bookingList);
+      // Initialize paginator and sort
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
 
-  acceptRequest(client: Client): void {
-    client.status = 'accepted';
-    this.bookingRequestService.updateBookingStatus(client.id, 'accepted').subscribe(() => {
-      alert(`Accepted appointment for ${client.name}`);
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  filterBookings(event: Event) {
+    let value = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = value.trim().toLowerCase();
+  }
+
+  acceptBooking(booking: Appointment) {
+    this.service.AcceptBooking(booking.id).subscribe(() => {
+      this.loadBookingRequests();
     });
   }
 
-  rejectRequest(client: Client): void {
-    client.status = 'rejected';
-    this.bookingRequestService.updateBookingStatus(client.id, 'rejected').subscribe(() => {
-      alert(`Rejected appointment for ${client.name}`);
+  rejectBooking(booking: Appointment) {
+    this.service.RejectBooking(booking.id).subscribe(() => {
+      this.loadBookingRequests();
     });
   }
+
+
 }

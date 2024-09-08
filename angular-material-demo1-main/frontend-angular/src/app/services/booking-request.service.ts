@@ -2,20 +2,25 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Client } from '../Model/Client';
+import { Appointment } from '../Model/Appointment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingRequestService {
-  private apiUrl = 'http://localhost:3000'; // Update with your actual API URL
+  private apiUrl = 'http://localhost:3000/appointment'; // Update with your actual API URL
 
   constructor(private http: HttpClient) {}
 
-  getBookingRequests(): Observable<Client[]> {
-    return this.http.get<Client[]>(`${this.apiUrl}/booking-requests`);
+  GetBookingRequests(): Observable<Appointment[]> {
+    return this.http.get<Appointment[]>(`${this.apiUrl}`);
   }
 
-  updateBookingStatus(clientId: number, status: string): Observable<any> {
-    return this.http.put(`${this.apiUrl}/booking-requests/${clientId}`, { status });
+  AcceptBooking(id: number): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/accept/${id}`, {});
+  }
+
+  RejectBooking(id: number): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/reject/${id}`, {});
   }
 }

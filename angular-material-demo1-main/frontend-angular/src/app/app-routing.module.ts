@@ -23,7 +23,7 @@ import { BookingRequestComponent } from './booking/booking-request/booking-reque
 const routes: Routes = [
   {path : "", component : HomeComponent},
   {path: 'appointment/:id', component: AppointmentComponent },
-  {path: 'booking-request', component: BookingRequestComponent },
+  
   {path : "login", component : LoginComponent},
   {path: 'register', component: RegisterComponent },
 
@@ -43,6 +43,7 @@ const routes: Routes = [
       {path : "invoice", component : InvoiceListComponent},
       {path : "invoice/:id", component : InvoiceDetailComponent},
       {path : "videocall", component : VideoCallComponent},
+      {path: 'booking-request', component: BookingRequestComponent }
     ]},
 ];
 
