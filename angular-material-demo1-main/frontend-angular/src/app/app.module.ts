@@ -57,7 +57,8 @@ import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.c
 import { PopupInterpreterComponent } from './Dialog/popup-interpreter/popup-interpreter.component';
 import { PopupInvoiceComponent } from './Dialog/popup-invoice/popup-invoice.component';
 import { AppointmentComponent } from './HomeClient/appointment/appointment.component';
-
+//import { ChartsModule } from 'ng2-charts';
+import { Chart } from 'chart.js';
 
 
 
@@ -133,7 +134,9 @@ import { AppointmentComponent } from './HomeClient/appointment/appointment.compo
     MatExpansionModule,
     MatDialogModule,
     HttpClientModule,
-    
+    BrowserModule
+
+
   ],
   providers: [
     AuthGuard, AuthorizationGuard

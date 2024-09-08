@@ -1,26 +1,117 @@
+/* Style général du tableau de bord */
 .dashboard-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f5f7;
+  min-height: 100vh;
 }
 
+/* Style pour chaque carte (contenant les graphiques) */
+mat-card {
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+mat-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Titres des cartes */
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Contenu des cartes */
+mat-card-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteneur des graphiques en ligne */
+.charts-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px; /* Espace entre les cartes */
+}
+
+.charts-row mat-card {
+  width: 48%; /* Chaque carte prend 48% de la largeur pour être côte à côte */
+}
+
+/* Style des graphiques */
+canvas {
+  display: block;
+  max-width: 100%;
+  height: 350px;
+  margin: 0 auto;
+}
+
+/* Liens rapides */
+.quick-links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.quick-links button {
+  background-color: #1976d2;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.quick-links button:hover {
+  background-color: #1565c0;
+}
+
+/* Statistiques clés */
 .stats-cards {
   display: flex;
-  gap: 16px;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .stat-card {
   flex: 1;
+  margin: 0 10px;
   text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.charts {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+.stat-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-mat-card {
-  flex: 1;
+.stat-card h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.stat-card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 15px;
 }

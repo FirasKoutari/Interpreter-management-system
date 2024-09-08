@@ -1,0 +1,163 @@
+<mat-drawer-container >
+  <mat-drawer #drawer mode="side" position="start" opened="true">
+    <mat-nav-list>
+      <mat-list-item>
+          <button mat-button routerLink="/admin/dashboard">
+            <mat-icon>dashboard</mat-icon>
+            Dashboard
+          </button>
+      </mat-list-item>
+      <!--Interpreters-->
+      <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>people</mat-icon>  
+            Interpreters
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/interpreters">
+              Interpreter List
+            </button>
+          </mat-list-item>
+         
+          <mat-list-item>
+            <button mat-button routerLink="/admin/calendar">
+              Interpreter schedule
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!--Clients-->
+      <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>people</mat-icon>  
+            Clients
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/clients">
+              Client List
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+       <!-- Booking -->
+       <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>event</mat-icon>
+            Booking
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/booking-request">
+              Booking Request
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/appointments">
+              Booking Management
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/videocall">
+              Video Call
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- Billing -->
+      <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>attach_money</mat-icon>
+            Billing
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/invoice">
+              Invoice List
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/payment">
+              Payment
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+       <!-- Notifications -->
+       <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>notifications</mat-icon>
+            Notifications
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/notification-list">
+              Notification List
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Tenants -->
+      <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>home</mat-icon>
+            Tenants
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/tenant-management">
+              Tenant Management
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/tenant-detail">
+              Tenant Detail
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Admin -->
+      <mat-expansion-panel class="section-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>admin_panel_settings</mat-icon>
+            Admin
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/role-management">
+              Role Management
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button routerLink="/admin/system-settings">
+              System Settings
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="min-height: 600px">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
