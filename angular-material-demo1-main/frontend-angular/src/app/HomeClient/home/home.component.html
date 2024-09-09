@@ -13,12 +13,14 @@
   </div>
 </header>
 
-  <div class="banner">
-    <div class="banner-item">
-      <img class="d-block w-110 " src="assets/banner.jpg" alt="First slide">
-    </div>
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Welcome to Our</h1>
+    <h1>Interpretation Services</h1>
+    <p>Your bridge to effective communication across languages and cultures.</p>
+    <button class="cta-button">Come And Join Us</button>
   </div>
-
+</section>
 
 <section class="search-bar">
   <form>
@@ -27,7 +29,7 @@
   </form>
 </section>
 
-<section class="results">
+<section class="results" *ngIf="filteredInterpreterList">
   <div *ngFor="let interpreter of filteredInterpreterList" class="interpreter-card">
     <div *ngIf="interpreter.status === 'pending'">
       <img [src]="interpreter.imageUrl" alt="{{ interpreter.name }}" class="interpreter-image">
@@ -43,4 +45,3 @@
     </div>
   </div>
 </section>
-

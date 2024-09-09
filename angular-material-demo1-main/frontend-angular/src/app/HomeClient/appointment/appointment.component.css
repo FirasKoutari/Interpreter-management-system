@@ -3,32 +3,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5c7faf;
-  padding: 15px 30px;
+  background-color: #35495e;
+  padding: 15px 40px;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
 }
 
 .navigation {
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-item {
   color: white;
   text-decoration: none;
-  font-size: 16px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-item:hover {
-  background-color: #333;
+  background-color: #42b983;
+  color: white;
 }
 
 .notification {
@@ -107,7 +111,7 @@ button {
   font-size: 18px;
   font-weight: 600;
   color: white;
-  background-color: #5c7faf;
+  background-color: #42b983;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -115,7 +119,7 @@ button {
 }
 
 button:hover {
-  background-color: #486b9c;
+  background-color: #379f70;
   transform: translateY(-2px);
 }
 
