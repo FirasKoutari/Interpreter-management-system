@@ -170,18 +170,18 @@
       "id": 9,
       "name": "firas",
       "langue": "francais",
-      "status": "disponible",
+      "status": "pending",
       "type": "surplace",
       "ville": "settat",
       "imageUrl": "assets/jane-smith.jpg"
     },
     {
-      "name": "",
-      "langue": "",
-      "status": "",
-      "type": "",
-      "ville": "",
-      "imageUrl": "",
+      "name": "aaaa",
+      "langue": "francais",
+      "status": "pending",
+      "type": "surplace",
+      "ville": "settat",
+      "imageUrl": "assets/jane-smith.jpg",
       "id": 10
     },
     {
@@ -190,8 +190,17 @@
       "status": "pending",
       "type": "dqf",
       "ville": "dfqs",
-      "imageUrl": "C:\\fakepath\\firas.jpg",
+      "imageUrl": "assets/jane-smith.jpg",
       "id": 11
+    },
+    {
+      "name": "hamid",
+      "langue": "Arabe",
+      "status": "pending",
+      "type": "en ligne",
+      "ville": "Oujda",
+      "imageUrl": "C:\\fakepath\\jane-smith.jpg",
+      "id": 12
     }
   ],
   "invoices": [
@@ -243,6 +252,13 @@
       "date": "",
       "status": "",
       "id": 7
+    },
+    {
+      "client": "",
+      "amount": "",
+      "date": "",
+      "status": "",
+      "id": 8
     }
   ],
   "events": [

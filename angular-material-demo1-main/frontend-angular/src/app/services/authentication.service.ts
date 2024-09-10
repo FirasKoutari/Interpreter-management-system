@@ -1,48 +1,95 @@
 import { Injectable } from '@angular/core';
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
+import { SignUpModel } from '../Model/SignUpModel';
+import { LoginModel } from '../Model/LoginModel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  public username : any;
-  public roles : string[] = [];
-  public authenticated : boolean =false;
-  public users:any = {
-    admin : ['ADMIN'],
-    user1 : ['MANAGER']
-  }
-  constructor(private router : Router) { }
 
-  public login(username : string, password : string){
-    if(this.users[username] && password==""){
-      this.username = username;
-      this.roles = this.users[username];
-      this.authenticated = true;
-      return true;
-    } else {
-      return false;
+  private loggedInUser: any = null;
+
+  constructor(private router: Router) {}
+
+  // Register new users
+  public register(signUpObj: SignUpModel): boolean {
+    const localUser = localStorage.getItem('angular17users');
+    let users = [];
+    if (localUser) {
+      users = JSON.parse(localUser);
     }
+
+    // Check if user already exists
+    const userExists = users.find((user: SignUpModel) => user.email === signUpObj.email);
+    if (userExists) {
+      alert('User with this email already exists.');
+      return false; // Prevent duplicate user registration
+    }
+
+    users.push(signUpObj);
+    localStorage.setItem('angular17users', JSON.stringify(users));
+    
+    // Debugging step: check what is stored
+    console.log('Users in localStorage after registration:', users);
+    
+    return true;
   }
 
-  logout() {
-    this.authenticated=false;
-    this.username = undefined;
-    this.roles = [];
-    this.router.navigateByUrl("/login");
+  // Login logic
+  public login(loginObj: LoginModel): boolean {
+    const localUsers = localStorage.getItem('angular17users');
+    if (localUsers) {
+      const users = JSON.parse(localUsers);
+
+      // Debugging step: check users in localStorage
+      console.log('Users retrieved from localStorage:', users);
+
+      const isUserPresent = users.find((user: SignUpModel) => 
+        user.email === loginObj.email && user.password === loginObj.password
+      );
+
+      if (isUserPresent) {
+        this.loggedInUser = isUserPresent;
+        localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
+
+        // Debugging step: check logged-in user
+        console.log('User found and logged in:', this.loggedInUser);
+
+        return true;
+      } else {
+        console.log('No matching user found for login:', loginObj);
+      }
+    } else {
+      console.log('No users in localStorage for login');
+    }
+    return false;
   }
 
-  public isAuthenticated(): boolean {
-    return this.authenticated;
+  // Logout function
+  public logout(): void {
+    this.loggedInUser = null;
+    localStorage.removeItem('loggedUser');
+    this.router.navigateByUrl('/login');
   }
 
-  public getUsername(): string | undefined {
-    return this.username;
+  // Check if a user is logged in
+  public get isAuthenticated(): boolean {
+    return this.loggedInUser !== null;
   }
 
-  public getRoles(): string[] {
-    return this.roles;
+  // Get logged-in user's name
+  public get username(): string | undefined {
+    return this.loggedInUser?.name;
   }
 
-  
+  // Get user roles (modify logic if needed)
+  public get roles(): string[] {
+    return this.loggedInUser ? ['USER'] : [];
+  }
+
+  // Get logged-in user data
+  public getLoggedUser(): SignUpModel | null {
+    return this.loggedInUser;
+  }
 }

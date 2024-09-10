@@ -7,13 +7,14 @@ import { AuthenticationService } from '../../services/authentication.service';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  public username: string | undefined;
-  public roles: string[] = [];
+  public username!: string | undefined;
+  public roles!: string[];
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService) {}
 
   ngOnInit(): void {
-    this.username = this.authService.getUsername();
-    this.roles = this.authService.getRoles();
+    // No parentheses needed when accessing getters
+    this.username = this.authService.username;
+    this.roles = this.authService.roles;
   }
 }
