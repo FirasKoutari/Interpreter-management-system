@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserService } from '../../services/user.service';
-import { Invoice } from '../../Model/Invoice';
 import { InvoiceService } from '../../services/invoice.service';
+import { Invoice } from '../../Model/Invoice';
 
 @Component({
   selector: 'app-invoice-detail',
@@ -25,7 +24,7 @@ export class InvoiceDetailComponent implements OnInit {
   loadInvoiceDetails() {
     this.service.GetInvoiceById(this.invoiceId).subscribe({
       next: (invoice) => {
-        this.invoice = invoice as Invoice;  // Type assertion
+        this.invoice = invoice as Invoice;
       },
       error: (err) => {
         console.error('Error loading invoice details:', err);

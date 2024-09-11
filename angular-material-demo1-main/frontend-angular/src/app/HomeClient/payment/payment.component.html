@@ -1,0 +1,98 @@
+<header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+    <nav class="navigation">
+      <a routerLink="" class="nav-item">Home</a>
+      <a routerLink="/checkout" class="nav-item">Checkout</a>
+      <a routerLink="/payment" class="nav-item">Payment</a>
+      <a routerLink="/login" class="nav-item">Login/Register</a>
+    </nav>
+    <div class="notification">
+      <i class="fa fa-bell"></i>
+    </div>
+  </header>
+
+
+<div class="payment-container">
+    <h2>Credit Card Payment</h2>
+  
+    <!-- Show a validation message if CVC is missing -->
+    <div class="alert" *ngIf="!cardCVV && formSubmitted">
+      <span>CVC code is required.</span>
+    </div>
+  
+    <!-- Payment form -->
+    <form (ngSubmit)="onSubmitPayment()" #paymentForm="ngForm">
+  
+      <!-- Card Holder's Name -->
+      <div class="form-group">
+        <label for="cardHolderName">Card Holder's Name</label>
+        <input
+          id="cardHolderName"
+          type="text"
+          [(ngModel)]="cardHolderName"
+          name="cardHolderName"
+          placeholder="Card Holder's Name"
+          required
+        />
+      </div>
+  
+      <!-- Card Number -->
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input
+          id="cardNumber"
+          type="text"
+          [(ngModel)]="cardNumber"
+          name="cardNumber"
+          placeholder="Card Number"
+          required
+        />
+      </div>
+  
+      <!-- Expiration Date & CVC -->
+      <div class="form-group">
+        <label for="cardExpiryMonth">Card Exp. Date</label>
+        <div class="expiry-group">
+          <select [(ngModel)]="cardExpiryMonth" name="cardExpiryMonth" required>
+            <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+          </select>
+          <select [(ngModel)]="cardExpiryYear" name="cardExpiryYear" required>
+            <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+          </select>
+          <input
+            id="cardCVV"
+            type="text"
+            [(ngModel)]="cardCVV"
+            name="cardCVV"
+            placeholder="CVC"
+            required
+          />
+        </div>
+      </div>
+  
+      <!-- Amount -->
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <div class="amount-group">
+          <span>$</span>
+          <input
+            id="amount"
+            type="text"
+            [(ngModel)]="amount"
+            name="amount"
+            placeholder="39.00"
+            required
+          />
+        </div>
+      </div>
+  
+      <!-- Submit and Cancel buttons -->
+      <div class="form-buttons">
+        <button type="button" class="btn-cancel" (click)="onCancel()">Cancel</button>
+        <button type="submit" class="btn-submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  

@@ -37,7 +37,6 @@ import { UserProfileComponent } from './auth/user-profile/user-profile.component
 import { VideoCallComponent } from './booking/video-call/video-call.component';
 import { InvoiceListComponent } from './billing/invoice-list/invoice-list.component';
 import { InvoiceDetailComponent } from './billing/invoice-detail/invoice-detail.component';
-import { PaymentComponent } from './billing/payment/payment.component';
 import { NotificationListComponent } from './notification/notification-list/notification-list.component';
 import { NotificationDetailComponent } from './notification/notification-detail/notification-detail.component';
 import { RoleManagementComponent } from './admin/role-management/role-management.component';
@@ -59,6 +58,10 @@ import { PopupInvoiceComponent } from './Dialog/popup-invoice/popup-invoice.comp
 import { AppointmentComponent } from './HomeClient/appointment/appointment.component';
 //import { ChartsModule } from 'ng2-charts';
 import { Chart } from 'chart.js';
+import { CheckoutComponent } from './HomeClient/checkout/checkout.component';
+import { PaymentComponent } from './HomeClient/payment/payment.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 
@@ -75,14 +78,13 @@ import { Chart } from 'chart.js';
     InterpretersComponent,
     ClientsComponent,
     AppointmentsComponent,
-
+    PaymentComponent,
     CalendarComponent,
     RegisterComponent,
     UserProfileComponent,
     VideoCallComponent,
     InvoiceListComponent,
     InvoiceDetailComponent,
-    PaymentComponent,
     NotificationListComponent,
     NotificationDetailComponent,
     RoleManagementComponent,
@@ -97,7 +99,8 @@ import { Chart } from 'chart.js';
     ConfirmDialogComponent,
     PopupInterpreterComponent,
     PopupInvoiceComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    CheckoutComponent
 
   ],
   imports: [
@@ -134,7 +137,9 @@ import { Chart } from 'chart.js';
     MatExpansionModule,
     MatDialogModule,
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    MatTabsModule,
+    MatChipsModule
 
 
   ],

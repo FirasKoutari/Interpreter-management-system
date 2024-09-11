@@ -129,7 +129,6 @@
 
       <button mat-button *ngIf="authService.isAuthenticated">
         {{ authService.username }}
-        {{ authService.roles }}
       </button>
       <button (click)="logout()" mat-raised-button color="accent">Logout</button>
       

@@ -4,7 +4,7 @@ import { AuthenticationService } from '../../services/authentication.service';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
   public username!: string | undefined;
@@ -13,7 +13,6 @@ export class UserProfileComponent implements OnInit {
   constructor(private authService: AuthenticationService) {}
 
   ngOnInit(): void {
-    // No parentheses needed when accessing getters
     this.username = this.authService.username;
     this.roles = this.authService.roles;
   }

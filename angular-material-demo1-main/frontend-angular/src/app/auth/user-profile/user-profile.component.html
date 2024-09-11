@@ -1,12 +1,36 @@
 <div class="profile-container">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>User Profile</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p><strong>Username:</strong> {{ username }}</p>
-        <p><strong>Roles:</strong> {{ roles.join(', ') }}</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  
+  <mat-card class="profile-card">
+    <div class="profile-header">
+      <div class="profile-image">
+        <img src="assets/jane-smith.jpg" alt="User Profile Picture" />
+      </div>
+      <div class="profile-info">
+        <h2>{{ username }}</h2>
+        <p class="user-role">{{ roles.join(', ') }}</p>
+        <p class="user-location">New York, NY</p>
+        <p class="user-rating">8.6 <mat-icon>star</mat-icon></p>
+        <button mat-button color="primary">Send Message</button>
+        <button mat-button>Contacts</button>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="profile-content">
+      <mat-tab-group>
+        <mat-tab label="Timeline">
+          <!-- Timeline content here -->
+        </mat-tab>
+        <mat-tab label="About">
+          <h3>Contact Information</h3>
+          <p><strong>Phone:</strong> +1 123 456 7890</p>
+          <p><strong>Address:</strong> 525 E 68th Street, New York, NY</p>
+          <p><strong>Email:</strong> hello&#64;jeremyrose.com</p>
+          <p><strong>Website:</strong> www.jeremyrose.com</p>
+          
+          <h3>Basic Information</h3>
+          <p><strong>Birthday:</strong> June 5, 1992</p>
+          <p><strong>Gender:</strong> Male</p>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-card>
+</div>

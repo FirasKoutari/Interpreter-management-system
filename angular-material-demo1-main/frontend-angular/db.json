@@ -201,6 +201,15 @@
       "ville": "Oujda",
       "imageUrl": "C:\\fakepath\\jane-smith.jpg",
       "id": 12
+    },
+    {
+      "name": "",
+      "langue": "",
+      "status": "",
+      "type": "",
+      "ville": "",
+      "imageUrl": "C:\\fakepath\\jane-smith.jpg",
+      "id": 13
     }
   ],
   "invoices": [
@@ -346,7 +355,10 @@
         "type": "sur place",
         "ville": "Casablanca",
         "imageUrl": "assets/interpreter-cd.jpg"
-      }
+        
+      },
+      "status" : "accepted"
+      
     },
     {
       "id": 2,

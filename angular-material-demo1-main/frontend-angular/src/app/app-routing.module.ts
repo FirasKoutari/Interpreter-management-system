@@ -19,10 +19,14 @@ import { VideoCallComponent } from './booking/video-call/video-call.component';
 import { InvoiceDetailComponent } from './billing/invoice-detail/invoice-detail.component';
 import { AppointmentComponent } from './HomeClient/appointment/appointment.component';
 import { BookingRequestComponent } from './booking/booking-request/booking-request.component';
+import { CheckoutComponent } from './HomeClient/checkout/checkout.component';
+import { PaymentComponent } from './HomeClient/payment/payment.component';
 
 const routes: Routes = [
   {path : "", component : HomeComponent},
   {path: 'appointment/:id', component: AppointmentComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'payment', component: PaymentComponent },
   
   {path : "login", component : LoginComponent},
   {path: 'register', component: RegisterComponent },

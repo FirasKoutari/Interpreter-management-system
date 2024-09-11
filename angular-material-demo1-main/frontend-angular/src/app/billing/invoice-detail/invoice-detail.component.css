@@ -1,0 +1,22 @@
+.invoice-detail-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .invoice-card {
+    padding: 20px;
+  }
+  
+  .invoice-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .invoice-info {
+    margin-top: 10px;
+  }
+  
+  mat-chip {
+    font-weight: bold;
+  }
+  

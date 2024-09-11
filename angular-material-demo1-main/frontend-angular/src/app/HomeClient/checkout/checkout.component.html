@@ -1,0 +1,105 @@
+<header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+    <nav class="navigation">
+      <a routerLink="" class="nav-item">Home</a>
+      <a routerLink="/checkout" class="nav-item">Checkout</a>
+      <a routerLink="/payment" class="nav-item">Payment</a>
+      <a routerLink="/login" class="nav-item">Login/Register</a>
+    </nav>
+    <div class="notification">
+      <i class="fa fa-bell"></i>
+    </div>
+  </header>
+
+  <div class="checkout-page">
+    <!-- Billing Details -->
+    <div class="billing-details">
+      <h2>Billing Details</h2>
+      <form class="billing-form">
+        <div class="form-group">
+          <label for="firstName">
+            <i class="fa fa-eye"></i> First Name
+          </label>
+          <input id="firstName" type="text" placeholder="First Name" [(ngModel)]="firstName" name="firstName" />
+        </div>
+  
+        <div class="form-group">
+          <label for="lastName">
+            <i class="fa fa-eye"></i> Last Name
+          </label>
+          <input id="lastName" type="text" placeholder="Last Name" [(ngModel)]="lastName" name="lastName" />
+        </div>
+  
+        <div class="form-group disabled">
+          <label for="company">
+            <i class="fa fa-eye-slash"></i> Company
+          </label>
+          <input id="company" type="text" placeholder="Company"  />
+        </div>
+  
+        <div class="form-group disabled">
+          <label for="country">
+            <i class="fa fa-eye-slash"></i> Country
+          </label>
+          <input id="country" type="text" placeholder="Country"  />
+        </div>
+  
+        <div class="form-group disabled">
+          <label for="street">
+            <i class="fa fa-eye-slash"></i> Street Add.
+          </label>
+          <input id="street" type="text" placeholder="Street Add."  />
+        </div>
+  
+        <div class="form-group disabled">
+          <label for="town">
+            <i class="fa fa-eye-slash"></i> Town
+          </label>
+          <input id="town" type="text" placeholder="Town"  />
+        </div>
+      </form>
+    </div>
+  
+    <!-- Checkout Section -->
+    <div class="checkout-details">
+      <h2>Checkout</h2>
+      <div class="checkout-summary">
+        <div class="product-summary">
+          <div class="product">
+            <img src="assets/jane-smith.jpg" alt="Product Image" />
+            <div class="product-details">
+              <h3>Interpreter</h3>
+            </div>
+          </div>
+          <div class="price-summary">
+            <span>$1550</span>
+          </div>
+        </div>
+  
+        <div class="total-summary">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <span>$1550</span>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <span>$170</span>
+          </div>
+        </div>
+  
+        <div class="payment-method">
+          <h4>Select Payment Method</h4>
+          <label>
+            <input type="radio" name="payment" value="bankTransfer" /> Direct Bank Transfer
+          </label>
+        </div>
+  
+        <button class="place-order-btn">Place Order</button>
+      </div>
+    </div>
+    
+  </div>
+  
+  

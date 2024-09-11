@@ -1,7 +1,57 @@
 .profile-container {
-    width: 600px;
-    margin: auto;
-    justify-content: center;
-    max-width: 800px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  .profile-card {
+    width: 100%;
+    max-width: 900px;
   }
-  
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    .profile-image {
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+      }
+    }
+
+    .profile-info {
+      margin-left: 20px;
+      flex: 1;
+
+      h2 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .user-role, .user-location, .user-rating {
+        margin: 5px 0;
+      }
+
+      .user-rating {
+        display: flex;
+        align-items: center;
+      }
+
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .profile-content {
+    padding: 20px;
+
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
