@@ -21,6 +21,7 @@ import { AppointmentComponent } from './HomeClient/appointment/appointment.compo
 import { BookingRequestComponent } from './booking/booking-request/booking-request.component';
 import { CheckoutComponent } from './HomeClient/checkout/checkout.component';
 import { PaymentComponent } from './HomeClient/payment/payment.component';
+import { TenantManagementComponent } from './tenant/tenant-management/tenant-management.component';
 
 const routes: Routes = [
   {path : "", component : HomeComponent},
@@ -47,7 +48,9 @@ const routes: Routes = [
       {path : "invoice", component : InvoiceListComponent},
       {path : "invoice/:id", component : InvoiceDetailComponent},
       {path : "videocall", component : VideoCallComponent},
-      {path: 'booking-request', component: BookingRequestComponent }
+      {path: 'booking-request', component: BookingRequestComponent },
+      {path: 'tenant-management', component: TenantManagementComponent }
+
     ]},
 ];
 

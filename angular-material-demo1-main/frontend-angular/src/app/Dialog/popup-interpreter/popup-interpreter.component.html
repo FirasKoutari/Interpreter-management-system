@@ -10,14 +10,6 @@
         <input formControlName="langue" matInput>
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Date</mat-label>
-        <input type="date" id="date" formControlName="date" matInput>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Heure</mat-label>
-        <input type="time" id="time" formControlName="heure" matInput>
-      </mat-form-field>
-      <mat-form-field>
         <mat-label>Status</mat-label>
         <input formControlName="status" matInput>
       </mat-form-field>
@@ -30,17 +22,17 @@
         <input formControlName="ville" matInput>
       </mat-form-field>
 
-      <!-- File Upload Section -->
-    <div class="upload-container">
-      <label for="fileInput" class="file-upload-label">
-        <img src="assets/upload.png" alt="Upload Icon" />
-        <span>Upload image</span>
-      </label>
-      <input formControlName="imageUrl" id="fileInput" type="file" (change)="onFileSelected($event)" class="file-input" />
-    </div>
+        <!-- File Upload Section -->
+      <div class="upload-container">
+        <label for="fileInput" class="file-upload-label">
+          <img src="assets/upload.png" alt="Upload Icon" />
+          <span>Upload image</span>
+        </label>
+        <input formControlName="imageUrl" id="fileInput" type="file"  class="file-input" />
+      </div>
 
-     <!-- Preview image -->
-     <img *ngIf="imagePreview" [src]="imagePreview" alt="Interpreter Image" width="100" height="100" />
+      
+
     
     </div>
     <div mat-dialog-actions>

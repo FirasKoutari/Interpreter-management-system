@@ -1,39 +1,41 @@
 <div class="invoice-detail-container">
   <mat-card class="invoice-card">
-    <mat-card-header>
+    <div class="invoice-header">
       <mat-card-title class="invoice-title">Invoice #{{ invoice.id }}</mat-card-title>
-      <mat-card-subtitle>{{ invoice.date | date: 'fullDate' }}</mat-card-subtitle>
-    </mat-card-header>
-    
-    <mat-divider></mat-divider>
+      <mat-card-subtitle class="invoice-subtitle">Date: {{ invoice.date | date: 'MM/dd/yyyy' }}</mat-card-subtitle>
+    </div>
     
     <mat-card-content>
-      <div class="invoice-info">
-        <mat-list dense>
-          <mat-list-item>
-            <span mat-line><strong>Client:</strong> {{ invoice.client.name }}</span>
-          </mat-list-item>
-          <mat-list-item>
-            <span mat-line><strong>Amount Due:</strong> {{ invoice.amount | currency }}</span>
-          </mat-list-item>
-          <mat-list-item>
-            <span mat-line><strong>Status:</strong> 
-              <mat-chip [color]="invoice.status === 'Paid' ? 'primary' : 'warn'" selected>{{ invoice.status }}</mat-chip>
-            </span>
-          </mat-list-item>
-          <mat-list-item>
-            <span mat-line><strong>Due Date:</strong> {{ invoice.dueDate | date: 'longDate' }}</span>
-          </mat-list-item>
-        </mat-list>
+      <table class="invoice-info-table">
+        <tr>
+          <th>Client</th>
+          <th>Amount Due</th>
+          <th>Status</th>
+          <th>Due Date</th>
+        </tr>
+        <tr>
+          <td>{{ invoice.client }}</td>
+          <td>{{ invoice.amount | currency }}</td>
+          <td><mat-chip [color]="invoice.status === 'Paid' ? 'primary' : 'warn'" selected>{{ invoice.status }}</mat-chip></td>
+          <td>{{ invoice.dueDate | date: 'MM/dd/yyyy' }}</td>
+        </tr>
+      </table>
+
+      <div class="note-section">
+        <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper massa blandit luctus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, odio reprehenderit? Rem porro dolor, voluptate quos nesciunt, odit nemo nisi temporibus minus iure, deserunt reprehenderit libero obcaecati aut. Ipsam, cum?</p>
+      </div>
+
+      <div class="invoice-footer">
+        <span class="total-amount">{{ invoice.amount | currency }}</span>
       </div>
     </mat-card-content>
     
     <mat-divider></mat-divider>
-    
+
     <mat-card-actions align="end">
-      <button mat-raised-button color="primary" routerLink="/admin/invoices">Back to Invoices</button>
+      <button mat-raised-button color="primary" routerLink="/admin/invoice">Back to Invoices</button>
       <button mat-raised-button color="accent">Download PDF</button>
-      <button mat-raised-button color="warn" *ngIf="invoice.status !== 'Paid'">Pay Now</button>
+      <button mat-raised-button color="warn" *ngIf="invoice.status !== 'Paid'" routerLink="/payment">Pay Now</button>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -1,1 +1,58 @@
-<p>tenant-management works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Tenants</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+
+      <!-- Tenant Filter -->
+      <mat-form-field appearance="outline">
+        <mat-label>Filter</mat-label>
+        <input matInput (input)="filterTenants($event)">
+      </mat-form-field>
+      <!-- End Tenant Filter -->
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="addTenant()">Add Tenant</button>
+      </div>
+
+      <!-- Tenant table -->
+      <table matSort mat-table [dataSource]="tenants" class="mat-elevation-z1">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </th>
+          <td mat-cell *matCellDef="let tenant"> {{tenant.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="interpreters">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Number of Interpreters </th>
+          <td mat-cell *matCellDef="let tenant"> {{tenant.interpreters}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+          <td mat-cell *matCellDef="let tenant">
+            <span class="status" [ngClass]="tenant.status">{{ tenant.status }}</span>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let tenant">
+            <button mat-icon-button color="primary" (click)="toggleStatus(tenant)">
+              <mat-icon>autorenew</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteTenant(tenant.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['name', 'interpreters', 'status', 'actions']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['name', 'interpreters', 'status', 'actions'];"></tr>
+      </table>
+      
+      <mat-paginator [pageSizeOptions]="[5, 10, 15, 30, 50, 100]"></mat-paginator>
+    </mat-card-content>
+  </mat-card>
+</div>

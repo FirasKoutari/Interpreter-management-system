@@ -2,8 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Client } from '../Model/Client';
-import { Interpreter } from '../Model/Interpreter';
-import { Invoice } from '../Model/Invoice';
+
 
 
 @Injectable({

@@ -25,10 +25,10 @@
       "id": 7
     },
     {
-      "id": 8,
       "name": "Client G",
       "langue": "Chinois",
-      "status": "pending"
+      "status": "pending",
+      "id": 8
     },
     {
       "id": 9,
@@ -131,13 +131,12 @@
       "imageUrl": "assets/jane-smith.jpg"
     },
     {
-      "id": 5,
-      "name": "Interpreter G",
-      "langue": "Chinois",
-      "status": "pending",
-      "type": "sur place",
-      "ville": "Casablanca",
-      "imageUrl": "assets/jane-smith.jpg"
+      "name": "ffcx",
+      "langue": "ff",
+      "status": "ff",
+      "type": "f",
+      "ville": "facv",
+      "id": 5
     },
     {
       "id": 6,
@@ -167,39 +166,21 @@
       "imageUrl": "assets/jane-smith.jpg"
     },
     {
-      "id": 9,
-      "name": "firas",
-      "langue": "francais",
-      "status": "pending",
-      "type": "surplace",
-      "ville": "settat",
-      "imageUrl": "assets/jane-smith.jpg"
-    },
-    {
-      "name": "aaaa",
-      "langue": "francais",
-      "status": "pending",
-      "type": "surplace",
-      "ville": "settat",
-      "imageUrl": "assets/jane-smith.jpg",
-      "id": 10
-    },
-    {
-      "name": "fdq",
-      "langue": "fqds",
-      "status": "pending",
-      "type": "dqf",
-      "ville": "dfqs",
-      "imageUrl": "assets/jane-smith.jpg",
+      "name": "",
+      "langue": "",
+      "status": "",
+      "type": "",
+      "ville": "",
+      "imageUrl": "C:\\fakepath\\firas2.jpg",
       "id": 11
     },
     {
-      "name": "hamid",
-      "langue": "Arabe",
-      "status": "pending",
-      "type": "en ligne",
-      "ville": "Oujda",
-      "imageUrl": "C:\\fakepath\\jane-smith.jpg",
+      "name": "fds",
+      "langue": "dfs",
+      "status": "fdsdf",
+      "type": "dsf",
+      "ville": "dsf",
+      "imageUrl": "",
       "id": 12
     },
     {
@@ -208,8 +189,33 @@
       "status": "",
       "type": "",
       "ville": "",
-      "imageUrl": "C:\\fakepath\\jane-smith.jpg",
+      "imageUrl": "C:\\fakepath\\firas.jpg",
       "id": 13
+    },
+    {
+      "name": "",
+      "langue": "",
+      "status": "",
+      "type": "",
+      "ville": "",
+      "imageUrl": "C:\\fakepath\\firas-removebg-preview.png",
+      "id": 14
+    },
+    {
+      "name": "",
+      "langue": "",
+      "status": "",
+      "type": "",
+      "ville": "",
+      "id": 15
+    },
+    {
+      "name": "",
+      "langue": "",
+      "status": "",
+      "type": "",
+      "ville": "",
+      "id": 16
     }
   ],
   "invoices": [
@@ -225,6 +231,7 @@
       "client": "Jane Smith",
       "amount": 200,
       "date": "2024-08-03",
+      "dueDate": "2024-08-27",
       "status": "Unpaid"
     },
     {
@@ -232,6 +239,7 @@
       "client": "Acme Corp",
       "amount": 450.5,
       "date": "2024-08-07",
+      "dueDate": "2024-08-27",
       "status": "Pending"
     },
     {
@@ -239,6 +247,7 @@
       "client": "Global Inc",
       "amount": 1250,
       "date": "2024-08-10",
+      "dueDate": "2024-08-27",
       "status": "Paid"
     },
     {
@@ -246,6 +255,7 @@
       "client": "Sarah Johnson",
       "amount": 350.25,
       "date": "2024-08-12",
+      "dueDate": "2024-08-27",
       "status": "Unpaid"
     },
     {
@@ -253,6 +263,7 @@
       "amount": "2424",
       "date": "2002-07-27",
       "status": "dsf",
+      "dueDate": "2024-08-27",
       "id": 6
     },
     {
@@ -260,6 +271,7 @@
       "amount": "",
       "date": "",
       "status": "",
+      "dueDate": "2024-08-27",
       "id": 7
     },
     {
@@ -267,6 +279,7 @@
       "amount": "",
       "date": "",
       "status": "",
+      "dueDate": "2024-08-27",
       "id": 8
     }
   ],
@@ -355,10 +368,8 @@
         "type": "sur place",
         "ville": "Casablanca",
         "imageUrl": "assets/interpreter-cd.jpg"
-        
       },
-      "status" : "accepted"
-      
+      "status": "accepted"
     },
     {
       "id": 2,

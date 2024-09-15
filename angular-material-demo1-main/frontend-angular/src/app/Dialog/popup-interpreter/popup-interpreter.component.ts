@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { UserService } from '../../services/user.service';
+
 import { InterpreterService } from '../../services/interpreter.service';
 
 @Component({
@@ -18,10 +18,9 @@ export class PopupInterpreterComponent {
     status: this.buildr.control(''),
     type: this.buildr.control(''),
     ville: this.buildr.control(''),
-    imageUrl: this.buildr.control('')  // Add imageUrl control
+
   });
-  imageFile!: File;  // To store the selected file
-  imagePreview: string | ArrayBuffer | null = '';  // To display image preview
+
 
   editdata: any;
   closemessage = 'closed using directive'
@@ -39,17 +38,7 @@ export class PopupInterpreterComponent {
     }
   } 
 
-  onFileSelected(event: Event) {
-    const file = (event.target as HTMLInputElement).files?.[0];
-    if (file) {
-      this.imageFile = file;
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.imagePreview = reader.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  }
+  
 
   setpopupdatainterpreter(id: any) {
     this.interpreterservice.GetInterpreterbyid(id).subscribe(item => {
@@ -59,11 +48,11 @@ export class PopupInterpreterComponent {
         langue: this.editdata.langue,
         status: this.editdata.status,
         type: this.editdata.type,
-        ville: this.editdata.ville,
-        imageUrl: this.editdata.imageUrl // Set the imageUrl value here
+        ville: this.editdata.ville
+
 
       });
-      this.imagePreview = this.editdata.imageUrl; // Display the existing image if available
+
     });
   }
   
