@@ -1,0 +1,115 @@
+/* Conteneur principal */
+.system-settings-container {
+    padding: 40px;
+    margin: 0 auto;
+    background-color: #f4f6f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+  }
+  
+  /* Titre principal */
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Sections des paramètres */
+  .settings-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  /* Champ de formulaire pleine largeur */
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-slide-toggle {
+    margin-bottom: 20px;
+  }
+  
+  /* Style des boutons */
+  button.save-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #1976d2;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  button.save-btn:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Onglets de la page de paramètres */
+  .mat-tab-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+  }
+  
+  .mat-tab-label-active {
+    color: #1976d2 !important;
+    font-weight: 600;
+  }
+  
+  .mat-tab-body-wrapper {
+    padding: 20px 0;
+  }
+  
+  /* Amélioration des sélecteurs et des champs d'entrée */
+  mat-select {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-input {
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+  .mat-form-field-label {
+    font-size: 14px;
+    color: #757575;
+  }
+  
+  /* Pagination et boutons mat */
+  .mat-paginator {
+    background-color: #f1f3f5;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Ajustement des marges pour une meilleure lisibilité */
+  .mat-form-field, .mat-slide-toggle {
+    margin-bottom: 20px;
+  }
+  

@@ -1,1 +1,67 @@
-<p>system-settings works!</p>
+<div class="system-settings-container">
+    <h2>System Settings</h2>
+  
+    <mat-tab-group>
+      <!-- Onglet Paramètres Généraux -->
+      <mat-tab label="General">
+        <div class="settings-section">
+          <h3>General Settings</h3>
+          <mat-form-field class="full-width">
+            <mat-label>System Name</mat-label>
+            <input matInput placeholder="Enter system name" [(ngModel)]="systemName">
+          </mat-form-field>
+  
+          <mat-form-field class="full-width">
+            <mat-label>Language</mat-label>
+            <mat-select [(ngModel)]="language">
+              <mat-option *ngFor="let lang of languages" [value]="lang">{{lang}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-slide-toggle [(ngModel)]="darkMode">Enable Dark Mode</mat-slide-toggle>
+        </div>
+      </mat-tab>
+  
+      <!-- Onglet Paramètres de Sécurité -->
+      <mat-tab label="Security">
+        <div class="settings-section">
+          <h3>Security Settings</h3>
+          <mat-slide-toggle [(ngModel)]="twoFactorAuth">Enable Two-Factor Authentication</mat-slide-toggle>
+  
+          <mat-form-field class="full-width">
+            <mat-label>Password Expiry (in days)</mat-label>
+            <input matInput type="number" placeholder="Enter number of days" [(ngModel)]="passwordExpiry">
+          </mat-form-field>
+        </div>
+      </mat-tab>
+  
+      <!-- Onglet Notifications -->
+      <mat-tab label="Notifications">
+        <div class="settings-section">
+          <h3>Notification Settings</h3>
+          <mat-slide-toggle [(ngModel)]="emailNotifications">Enable Email Notifications</mat-slide-toggle>
+  
+          <mat-slide-toggle [(ngModel)]="smsNotifications">Enable SMS Notifications</mat-slide-toggle>
+        </div>
+      </mat-tab>
+  
+      <!-- Onglet Intégrations -->
+      <mat-tab label="Integrations">
+        <div class="settings-section">
+          <h3>Integration Settings</h3>
+          <mat-form-field class="full-width">
+            <mat-label>API Key</mat-label>
+            <input matInput placeholder="Enter your API Key" [(ngModel)]="apiKey">
+          </mat-form-field>
+  
+          <mat-form-field class="full-width">
+            <mat-label>Webhook URL</mat-label>
+            <input matInput placeholder="Enter your Webhook URL" [(ngModel)]="webhookUrl">
+          </mat-form-field>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  
+    <button mat-raised-button color="primary" class="save-btn" (click)="saveSettings()">Save Settings</button>
+  </div>
+  

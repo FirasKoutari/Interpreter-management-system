@@ -62,6 +62,8 @@ import { CheckoutComponent } from './HomeClient/checkout/checkout.component';
 import { PaymentComponent } from './HomeClient/payment/payment.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -139,7 +141,9 @@ import { MatChipsModule } from '@angular/material/chips';
     HttpClientModule,
     BrowserModule,
     MatTabsModule,
-    MatChipsModule
+    MatChipsModule,
+    MatCheckboxModule,
+    MatSelectModule
 
 
   ],

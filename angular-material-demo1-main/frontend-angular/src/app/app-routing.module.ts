@@ -22,6 +22,8 @@ import { BookingRequestComponent } from './booking/booking-request/booking-reque
 import { CheckoutComponent } from './HomeClient/checkout/checkout.component';
 import { PaymentComponent } from './HomeClient/payment/payment.component';
 import { TenantManagementComponent } from './tenant/tenant-management/tenant-management.component';
+import { RoleManagementComponent } from './admin/role-management/role-management.component';
+import { SystemSettingsComponent } from './admin/system-settings/system-settings.component';
 
 const routes: Routes = [
   {path : "", component : HomeComponent},
@@ -49,7 +51,9 @@ const routes: Routes = [
       {path : "invoice/:id", component : InvoiceDetailComponent},
       {path : "videocall", component : VideoCallComponent},
       {path: 'booking-request', component: BookingRequestComponent },
-      {path: 'tenant-management', component: TenantManagementComponent }
+      {path: 'tenant-management', component: TenantManagementComponent },
+      {path: 'role-management', component: RoleManagementComponent },
+      {path: 'system-settings', component: SystemSettingsComponent }
 
     ]},
 ];
