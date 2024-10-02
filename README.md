@@ -35,4 +35,4 @@
 
 •	Cette partie pratique démontre que le "Interpreter-Management-System" répond avec succès aux objectifs définis et contribue positivement à l'évolution et à l'efficacité de la pratique médicale à distance
 
-Angular 17
+
